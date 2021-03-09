@@ -1,0 +1,42 @@
+//antialiased,subpixel-antialiased,none
+$font-smoothing: antialiased;
+
+//auto,optimizeSpeed,optimizeLegibility,geometricPrecision
+$text-rendering: auto;
+
+$base-font-family: "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
+$base-font-size: 14px;
+$base-font-color: #151515;
+$base-background-color: #fff;
+
+$site-size: 1090px + 60;
+
+// colors
+$color-primary: #b3acfa; // violet
+$color-secondary: #e48541; // orange
+
+// easing / animation
+$duration: .25s;
+$duration-long: .4s;
+$easing: ease-in-out;
+$delay: .35s;
+
+//breakpoints
+$breakpoint-mobile: 767px;
+$breakpoint-wide: 1600px;
+$breakpoint-ultra-wide: 1900px;
+
+//path
+$path-assets: "/mama-select/wp-content/themes/mama-select/assets";
+$path-image: "#{$path-assets}/images";
+$path-font: "#{$path-assets}/fonts";
+
+$font-avenir: 'Avenir-Book';
+
+@font-face {
+    font-family: 'Avenir-Book';
+    src: url('#{$path-font}/Avenir-Book.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('#{$path-font}/Avenir-Book.woff2') format('woff2'),  /* Super Modern Browsers */
+    url('#{$path-font}/Avenir-Book.woff') format('woff'), /* Pretty Modern Browsers */
+    url('#{$path-font}/Avenir-Book.ttf')  format('truetype'), /* Safari, Android, iOS */
+}

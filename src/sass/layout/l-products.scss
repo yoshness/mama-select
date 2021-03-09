@@ -1,0 +1,14 @@
+.l-products {
+	color: red;
+}
+
+.l-products__content {
+	ul {
+		list-style-type: none;
+
+		li {
+			width: 30%;
+			margin-bottom: 20px;
+		}
+	}
+}

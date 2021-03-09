@@ -1,0 +1,14 @@
+.l-index {
+	color: red;
+}
+
+.l-index__categories {
+	ul {
+		list-style-type: none;
+
+		li {
+			width: 30%;
+			margin-bottom: 20px;
+		}
+	}
+}
