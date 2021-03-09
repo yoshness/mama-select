@@ -404,10 +404,10 @@ textarea {
 }
 
 .category-block {
-  background-color: #b3acfa;
   height: 100px;
-  padding: 0 15px;
   position: relative;
+  padding: 0 15px;
+  background-color: #b3acfa;
 }
 
 .category-block img {
@@ -419,14 +419,14 @@ textarea {
 }
 
 .category-block h3 {
-  margin-top: 10px;
-  color: #fff;
-  text-align: center;
   width: 100%;
-  font-size: 13px;
   position: absolute;
   bottom: 8px;
   left: 50%;
+  margin-top: 10px;
+  font-size: 13px;
+  text-align: center;
+  color: #fff;
   transform: translateX(-50%);
 }
 
@@ -448,8 +448,8 @@ textarea {
 }
 
 .product-block span {
-  font-style: italic;
   font-size: 12px;
+  font-style: italic;
 }
 
 .l-container {

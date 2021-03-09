@@ -1,25 +1,25 @@
 .category-block {
-	background-color: $color-primary;
-	height: 100px;
-	padding: 0 15px;
-	position: relative;
+  height: 100px;
+  position: relative;
+  padding: 0 15px;
+  background-color: $color-primary;
 
-	img {
-		width: 100%;
-		height: 40px;
-		object-fit: contain;
-		filter: grayscale(.1) sepia(1) saturate(30) brightness(.5) hue-rotate(-115deg);
-	}
-	h3 {
-		margin-top: 10px;
-		color: #fff;
-		text-align: center;
-		width: 100%;
-		font-size: 13px;
+  img {
+    width: 100%;
+    height: 40px;
 
-		position: absolute;
-		bottom: 8px;
-		left: 50%;
-		transform: translateX(-50%);
-	}
+    object-fit: contain;
+    filter: grayscale(.1) sepia(1) saturate(30) brightness(.5) hue-rotate(-115deg);
+  }
+  h3 {
+    width: 100%;
+    position: absolute;
+    bottom: 8px;
+    left: 50%;
+    margin-top: 10px;
+    font-size: 13px;
+    text-align: center;
+    color: #fff;
+    transform: translateX(-50%);
+  }
 }
