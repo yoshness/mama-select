@@ -18,6 +18,9 @@ body {
 }
 
 html, body {
+  overflow: hidden;
+  height: 100vh;
+  
   // STATE WHEN MENU IS OPEN
   &.is-locked {
     overflow: hidden;

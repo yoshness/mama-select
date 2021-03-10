@@ -26,10 +26,12 @@
 		<meta property="og:site_name" content="Mama-Select" />
 		<meta property="og:image" content="<?php echo IMAGE_URL; ?>ogp.jpg">
 		<link rel="shortcut icon" type="image/png" href="<?php echo IMAGE_URL; ?>favicon.png"/>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
 		
 		<?php wp_head(); ?>
 	</head>
 
 	<body <?php body_class(); ?>>
-		<!-- <?php get_template_part( 'template-parts/header'); ?> -->
-		<!-- <?php get_template_part( 'template-parts/menu'); ?> -->
+		<div class="loader-overlay" id="js-loader-overlay"></div>
+		<?php get_template_part( 'template-parts/header'); ?>

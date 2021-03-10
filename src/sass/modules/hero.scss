@@ -1,0 +1,12 @@
+.hero {
+  display: none;
+
+  video {
+    width: 100%;
+    height: calc(100vh - 159px);
+    position: absolute;
+    border: none;
+
+    object-fit: cover;
+  }
+}

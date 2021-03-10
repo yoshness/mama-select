@@ -4,10 +4,16 @@
 
 @import 'lib/media-queries';
 @import 'lib/utility';
+@import 'lib/icon';
 @import 'lib/slick';
 
+@import 'modules/animations';
+@import 'modules/header';
+@import 'modules/hero';
 @import 'modules/category-block';
 @import 'modules/product-block';
+@import 'modules/loader-overlay';
+@import 'modules/medal';
 
 @import 'layout/l-container';
 @import 'layout/l-index';
