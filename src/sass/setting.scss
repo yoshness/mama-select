@@ -26,8 +26,10 @@ $breakpoint-mobile: 767px;
 $breakpoint-wide: 1600px;
 $breakpoint-ultra-wide: 1900px;
 
-//path
+//dev environment
 $path-assets: "/mama-select/wp-content/themes/mama-select/assets";
+//live environment
+// $path-assets: "/wp-content/themes/mama-select/assets";
 $path-image: "#{$path-assets}/images";
 $path-font: "#{$path-assets}/fonts";
 

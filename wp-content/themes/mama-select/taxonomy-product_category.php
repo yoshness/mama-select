@@ -26,7 +26,7 @@ get_header();
 				?>
 				<li>
 					<div class="product-block">
-						<a href="<?php the_field('url'); ?>" class="u-flex u-flex--center" target="_blank">
+						<a href="<?php the_field('url'); ?>" class="u-flex u-flex--center" target="_blank" rel="nofollow">
 							<img src="<?php the_field('image'); ?>" alt="">
 							<h3><?php the_title(); ?></h3>
 							<span>¥<?php the_field('price'); ?></span>
@@ -37,10 +37,9 @@ get_header();
 			</ul>
 		</div>
 	</section>
-	<?php } else { ?>
-		<div class="l-container">
-			<p class="l-products__blank">そのカテゴリに属する​​製品は見つかりませんでした。</p>
-		</div>
+	<div class="l-container">
+		<p class="l-products__blank">そのカテゴリに属する​​製品は見つかりませんでした。</p>
+	</div>
 	<?php } ?>
 </main>
 

@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 6);
+/******/ 	return __webpack_require__(__webpack_require__.s = 7);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -72,11 +72,12 @@
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_jquery__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__modules_search__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__modules_toggle_show__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__modules_page_transition__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__modules_video__ = __webpack_require__(5);
 
 window.jQuery = __WEBPACK_IMPORTED_MODULE_0_jquery___default.a;
 window.$ = __WEBPACK_IMPORTED_MODULE_0_jquery___default.a;
@@ -85,9 +86,11 @@ window.$ = __WEBPACK_IMPORTED_MODULE_0_jquery___default.a;
 
 
 
+
 __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__modules_search__["a" /* default */])();
 __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__modules_toggle_show__["a" /* default */])();
 __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_3__modules_page_transition__["a" /* default */])();
+__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_4__modules_video__["a" /* default */])();
 
 /***/ }),
 /* 1 */
@@ -196,6 +199,22 @@ function toggleShow() {
 
 /***/ }),
 /* 5 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = video;
+function video() {
+	var video = document.getElementById('js-hero-video');
+
+	if (video) {
+		video.oncanplaythrough = function () {
+			video.classList.add('is-loaded');
+		};
+	}
+}
+
+/***/ }),
+/* 6 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -11083,7 +11102,7 @@ return jQuery;
 
 
 /***/ }),
-/* 6 */
+/* 7 */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(0);

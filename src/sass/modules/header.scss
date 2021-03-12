@@ -20,7 +20,7 @@
   right: 0;
   font-size: 19px;
   cursor: pointer;
-  color: $color-primary;
+  color: #000;
 }
 
 .header__search-input {
@@ -33,13 +33,13 @@
   padding $duration $easing;
 
   &::placeholder {
-    color: $color-primary;
+    color: #000;
   }
 
   &.is-active {
     width: 140px;
     padding: 7px 20px;
-    border: 1px solid $color-primary;
+    border: 1px solid #000;
 
     @include max-screen($breakpoint-mobile) {
       width: 110px;

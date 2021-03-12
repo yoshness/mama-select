@@ -13,7 +13,7 @@
     width: 100%;
     height: 160px;
 
-    object-fit: cover;
+    object-fit: contain;
     @include max-screen($breakpoint-mobile) {
       height: 85px;
     }
