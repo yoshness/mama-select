@@ -23,3 +23,15 @@
     transform: rotateZ(0);
   }
 }
+
+@keyframes glowing {
+  0% {
+    text-shadow: 0 0 20px #f00;
+  }
+  50% {
+    text-shadow: 0 0 3px #b20000;
+  }
+  100% {
+    text-shadow: 0 0 20px #f00;
+  }
+}

@@ -63,7 +63,8 @@ get_header();
 				            'value'   => '',
 				            'compare' => '!='
 				        )
-				    )
+				    ),
+				    'posts_per_page' => 12
 				);
 				$articles = new WP_Query($ranked_products);
 				if ($articles->have_posts()) {
@@ -94,7 +95,7 @@ get_header();
 				<li class="<?php echo $modifier; ?>">
 					<div class="medal">
 				    	<div class="medal__circle">
-				        	<span><?php echo ($count == 1 || $count == 2 || $count == 3) ? $count : ''; ?></span>
+				        	<span><?php echo $count; ?></span>
 				      	</div>
 				      	<div class="medal__ribbon medal__ribbon--left"></div>
 				      	<div class="medal__ribbon medal__ribbon--right"></div>
@@ -102,7 +103,37 @@ get_header();
 				    <div class="product-block">
 						<a href="<?php the_field('url'); ?>" class="u-flex u-flex--center" target="_blank" rel="nofollow">
 							<img src="<?php the_field('image'); ?>" alt="">
-							<h3><?php the_title(); ?></h3>
+							<h3 class="js-truncate"><?php the_title(); ?></h3>
+							<span>¥<?php the_field('price'); ?></span>
+						</a>
+					</div>
+				</li>
+				<?php endwhile; wp_reset_query(); ?>
+			</ul>
+			<?php } ?>
+		</div>
+	</div>
+	<div class="l-index__latest js-toggle-show" id="js-latest">
+		<div class="l-container">
+			<?php 
+				$ranked_products = array(
+				    'post_type'=> 'product',
+				    'order'    => 'DESC',
+				    'posts_per_page' => 12
+				);
+				$articles = new WP_Query($ranked_products);
+				if ($articles->have_posts()) {
+			?>
+			<ul class="u-flex">
+				<?php 
+					while ($articles->have_posts()): $articles->the_post();
+					$featured_image = get_field('cover');
+				 ?>
+				<li>
+				    <div class="product-block">
+						<a href="<?php the_field('url'); ?>" class="u-flex u-flex--center" target="_blank" rel="nofollow">
+							<img src="<?php the_field('image'); ?>" alt="">
+							<h3 class="js-truncate"><?php the_title(); ?></h3>
 							<span>¥<?php the_field('price'); ?></span>
 						</a>
 					</div>

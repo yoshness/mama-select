@@ -92,3 +92,21 @@
     }
   }
 }
+
+@media only screen and (min-width : 768px) and (max-height: 800px) {
+  .header {
+    padding: 15px 20px;
+  }
+  .header__logo {
+    img {
+      width: 115px;
+    }
+  }
+  .header__bottom {
+    margin-top: 15px;
+    font-size: 13px;
+  }
+  .header__search {
+    margin-top: 15px;
+  }
+}

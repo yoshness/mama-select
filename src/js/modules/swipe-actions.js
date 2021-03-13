@@ -7,7 +7,6 @@ export default function swipeActions() {
 		document.addEventListener('swiped-right', function(e) {
 
 		  if($previous.length > 0) {
-		  	console.log('ewewe');
 		  	document.querySelector('#js-pagination .previouspostslink').click();
 		  }
 		});
