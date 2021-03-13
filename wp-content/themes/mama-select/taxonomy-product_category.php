@@ -10,9 +10,10 @@ get_header();
       	$article_args = array(
 			'post_type'      => 'product',
 			'product_category' => get_queried_object()->slug,
-	    	'posts_per_page' => -1,
+	    	'posts_per_page' => 12,
 	    	'order'          => 'DESC',
-	    	'post_status'    => 'publish'
+	    	'post_status'    => 'publish',
+	    	'paged' => get_query_var('paged')
 		);
 		$articles = new WP_Query($article_args);
 		if ($articles->have_posts()) {
@@ -28,13 +29,20 @@ get_header();
 					<div class="product-block">
 						<a href="<?php the_field('url'); ?>" class="u-flex u-flex--center" target="_blank" rel="nofollow">
 							<img src="<?php the_field('image'); ?>" alt="">
-							<h3><?php the_title(); ?></h3>
+							<h3 class="js-truncate"><?php the_title(); ?></h3>
 							<span>¥<?php the_field('price'); ?></span>
 						</a>
 					</div>
 				</li>
 				<?php endwhile; wp_reset_query(); ?>
 			</ul>
+			<div class="l-products__pagination pagination">
+				<?php if ( function_exists('wp_pagenavi') ) : ?>
+		        	<div class="pagenavi">
+		            	<?php wp_pagenavi( array( 'query' => $articles = new WP_Query($article_args) ) ); ?>
+		        	</div>
+		        <?php endif; wp_reset_postdata(); ?>
+			</div>
 		</div>
 	</section>
 	<?php } else { ?>

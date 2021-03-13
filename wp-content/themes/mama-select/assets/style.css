@@ -465,6 +465,12 @@ textarea {
   padding: 25px;
 }
 
+@media screen and (max-width: 767px) {
+  .header {
+    padding: 15px 20px;
+  }
+}
+
 .header__logo {
   display: block;
 }
@@ -522,6 +528,14 @@ textarea {
   margin-top: 25px;
   font-family: "Avenir-Book";
   font-size: 15px;
+}
+
+@media screen and (max-width: 767px) {
+  .header__bottom {
+    margin-top: 20px;
+    font-size: 13px;
+    line-height: 1;
+  }
 }
 
 .header__bottom a {
@@ -642,7 +656,7 @@ textarea {
 
 @media screen and (max-width: 767px) {
   .product-block img {
-    height: 85px;
+    height: 70px;
   }
 }
 
@@ -653,7 +667,8 @@ textarea {
 
 @media screen and (max-width: 767px) {
   .product-block h3 {
-    font-size: 14px;
+    margin-top: 5px;
+    font-size: 13px;
   }
 }
 
@@ -664,7 +679,8 @@ textarea {
 
 @media screen and (max-width: 767px) {
   .product-block span {
-    font-size: 12px;
+    display: block;
+    font-size: 11px;
   }
 }
 
@@ -816,9 +832,69 @@ textarea {
 @media screen and (max-width: 767px) {
   .l-products__content ul li {
     width: 30%;
+    margin-bottom: 12px;
   }
 }
 
 .l-products__blank {
   text-align: center;
+}
+
+.l-products__pagination {
+  margin-top: 25px;
+  text-align: center;
+}
+
+@media screen and (max-width: 767px) {
+  .l-products__pagination {
+    margin-top: 10px;
+  }
+}
+
+.l-products__pagination .wp-pagenavi span,
+.l-products__pagination .wp-pagenavi a {
+  padding: 15px 20px;
+  color: #b3acfa;
+  border-color: #b3acfa;
+  transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out;
+}
+
+@media screen and (max-width: 767px) {
+  .l-products__pagination .wp-pagenavi span,
+  .l-products__pagination .wp-pagenavi a {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+}
+
+.l-products__pagination .wp-pagenavi span:hover, .l-products__pagination .wp-pagenavi span.current,
+.l-products__pagination .wp-pagenavi a:hover,
+.l-products__pagination .wp-pagenavi a.current {
+  color: #fff !important;
+  border-color: #b3acfa;
+  background-color: #b3acfa;
+}
+
+.l-products__pagination .wp-pagenavi span:visited,
+.l-products__pagination .wp-pagenavi a:visited {
+  color: #b3acfa;
+}
+
+.l-products__pagination .wp-pagenavi span.previouspostslink, .l-products__pagination .wp-pagenavi span.nextpostslink,
+.l-products__pagination .wp-pagenavi a.previouspostslink,
+.l-products__pagination .wp-pagenavi a.nextpostslink {
+  position: relative;
+  top: 3px;
+  padding: 7px 18px 9px;
+  font-size: 25px;
+}
+
+@media screen and (max-width: 767px) {
+  .l-products__pagination .wp-pagenavi span.previouspostslink, .l-products__pagination .wp-pagenavi span.nextpostslink,
+  .l-products__pagination .wp-pagenavi a.previouspostslink,
+  .l-products__pagination .wp-pagenavi a.nextpostslink {
+    top: 2px;
+    padding: 2px 9px 3px;
+    font-size: 18px;
+  }
 }

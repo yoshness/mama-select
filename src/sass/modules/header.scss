@@ -1,5 +1,9 @@
 .header {
   padding: 25px;
+
+  @include max-screen($breakpoint-mobile) {
+    padding: 15px 20px;
+  }
 }
 
 .header__logo {
@@ -53,6 +57,12 @@
   margin-top: 25px;
   font-family: $font-avenir;
   font-size: 15px;
+
+  @include max-screen($breakpoint-mobile) {
+    margin-top: 20px;
+    font-size: 13px;
+    line-height: 1;
+  }
 
   a {
     color: $base-font-color;
