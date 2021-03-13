@@ -57,7 +57,13 @@ get_header();
 				    'order'    => 'ASC',
 				    'meta_key' => 'rank',
 					'orderby'  => 'meta_value',
-				    'hide_empty' => false,
+				    'meta_query'      => array(
+				        array(
+				            'key'     => 'rank',
+				            'value'   => '',
+				            'compare' => '!='
+				        )
+				    )
 				);
 				$articles = new WP_Query($ranked_products);
 				if ($articles->have_posts()) {

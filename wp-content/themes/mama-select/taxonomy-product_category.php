@@ -37,6 +37,7 @@ get_header();
 			</ul>
 		</div>
 	</section>
+	<?php } else { ?>
 	<div class="l-container">
 		<p class="l-products__blank">そのカテゴリに属する​​製品は見つかりませんでした。</p>
 	</div>

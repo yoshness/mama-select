@@ -571,11 +571,9 @@ textarea {
 }
 
 .category-block {
-  -ms-flex-pack: center;
-      justify-content: center;
   position: relative;
   border-radius: 15px;
-  background-color: #b3acfa;
+  background-color: #9a9a9a;
 }
 
 @media screen and (max-width: 767px) {

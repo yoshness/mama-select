@@ -1,8 +1,7 @@
 .category-block {
-  justify-content: center;
   position: relative;
   border-radius: 15px;
-  background-color: $color-primary;
+  background-color: #9a9a9a;
 
   @include max-screen($breakpoint-mobile) {
     border-radius: 8px;
