@@ -14,14 +14,12 @@
     width: 100%;
     height: calc(100vh - 159px);
     position: absolute;
-    opacity: 0;
     border: none;
-    transition: opacity $duration $easing;
 
     object-fit: cover;
 
-    &.is-loaded {
-      opacity: 1;
+    @include max-screen($breakpoint-mobile) {
+      height: calc(100vh - 124px);
     }
   }
 }

@@ -19,7 +19,7 @@ get_header();
 
 <main class="l-index" id="js-index-page">
 	<div class="hero js-toggle-show" id="js-hero">
-		<video id="js-hero-video" autoplay muted loop playsinline>
+		<video autoplay muted loop playsinline>
 		  <source src="<?php echo IMAGE_URL; ?>/intro-video.mp4" type="video/mp4">
 		</video>
 	</div>

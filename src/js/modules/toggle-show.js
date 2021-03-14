@@ -21,14 +21,17 @@ export default function toggleShow() {
 			$(e.currentTarget).addClass('is-active');
 		}
 		else {
-			window.location = `/mama-select/${target}`;
+			window.location = `/${target}`;
 		}
 	});
 
 	if(window.location.href.indexOf('#js-hero') > -1) {
       	$('a[href="#js-hero"]').addClass('is-active');
     }
-    else {
+    if(window.location.href.indexOf('#js-categories') > -1 ||
+    	window.location.href.indexOf('#js-ranking') > -1 ||
+   		window.location.href.indexOf('#js-latest') > -1) 
+    {
     	$toggleEls.removeClass('is-shown');
     	$trigger.removeClass('is-active');
 

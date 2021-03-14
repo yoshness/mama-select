@@ -26,6 +26,7 @@
 		<meta property="og:site_name" content="Mama-Select" />
 		<meta property="og:image" content="<?php echo IMAGE_URL; ?>ogp.jpg">
 		<link rel="shortcut icon" type="image/png" href="<?php echo IMAGE_URL; ?>favicon.png"/>
+		<link rel="apple-touch-icon" href="<?php echo IMAGE_URL; ?>favicon.png">
 
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery.dotdotdot/4.1.0/dotdotdot.js" integrity="sha512-y3NiupaD6wK/lVGW0sAoDJ0IR2f3+BWegGT20zcCVB+uPbJOsNO2PVi09pCXEiAj4rMZlEJpCGu6oDz0PvXxeg==" crossorigin="anonymous"></script>
