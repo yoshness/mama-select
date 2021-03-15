@@ -110,19 +110,6 @@ __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_5__modules_swipe_actions__["a" /
 function pageTransition() {
     var $htmlBody = $('html, body');
 
-    $(document).ready(function () {
-        var tl = anime.timeline({
-            targets: document.querySelector('#js-loader-overlay'),
-            easing: 'easeInOutExpo',
-            duration: 1000
-        });
-        tl.add({
-            width: '0'
-        }).add({
-            opacity: 0,
-            easing: 'easeOutSine'
-        });
-    });
     $(window).on('beforeunload', function () {
         anime({
             targets: document.querySelector('body'),

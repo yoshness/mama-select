@@ -56,7 +56,7 @@ get_header();
 				    'post_type'=> 'product',
 				    'order'    => 'ASC',
 				    'meta_key' => 'rank',
-					'orderby'  => 'meta_value',
+					'orderby'  => 'meta_value_num',
 				    'meta_query'      => array(
 				        array(
 				            'key'     => 'rank',
@@ -95,7 +95,7 @@ get_header();
 				<li class="<?php echo $modifier; ?>">
 					<div class="medal">
 				    	<div class="medal__circle">
-				        	<span><?php echo $count; ?></span>
+				        	<span><?php echo $count ?></span>
 				      	</div>
 				      	<div class="medal__ribbon medal__ribbon--left"></div>
 				      	<div class="medal__ribbon medal__ribbon--right"></div>
