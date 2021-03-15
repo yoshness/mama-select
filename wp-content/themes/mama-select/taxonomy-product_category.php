@@ -36,7 +36,7 @@ get_header();
 				</li>
 				<?php endwhile; wp_reset_query(); ?>
 			</ul>
-			<div class="l-products__pagination pagination" id="js-pagination">
+			<div class="l-pagination pagination" id="js-pagination">
 				<?php if ( function_exists('wp_pagenavi') ) : ?>
 		        	<div class="pagenavi">
 		            	<?php wp_pagenavi( array( 'query' => $articles = new WP_Query($article_args) ) ); ?>

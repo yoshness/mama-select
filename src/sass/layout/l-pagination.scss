@@ -1,0 +1,72 @@
+.l-pagination {
+  margin-top: 25px;
+  text-align: center;
+
+  @include max-screen($breakpoint-mobile) {
+    margin-top: 10px;
+  }
+
+  .pagenavi {
+    span,
+    a {
+      display: inline-block;
+      padding: 15px 20px;
+      color: $color-primary;
+      border: 1px solid $color-primary;
+      transition: background-color $duration $easing,
+      color $duration $easing;
+
+      @include max-screen($breakpoint-mobile) {
+        padding: 6px 10px;
+        font-size: 12px;
+      }
+
+      &:hover,
+      &.current {
+        color: #fff !important;
+        border-color: $color-primary;
+        background-color: $color-primary;
+      }
+      &:visited {
+        color: $color-primary;
+      }
+
+      &.previouspostslink,
+      &.nextpostslink {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .custom-pagination {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 275px;
+    margin: 0 auto;
+
+    @include max-screen($breakpoint-mobile) {
+      width: 200px;
+    }
+
+    li {
+      width: auto;
+    }
+  }
+}
+
+@media only screen and (min-width : 768px) and (max-height: 800px) {
+  .l-pagination {
+    .pagenavi {
+      span,
+      a {
+        padding: 10px 15px;
+        font-size: 12px;
+      }
+
+      .custom-pagination {
+        width: 220px;
+      }
+    }
+  }
+}

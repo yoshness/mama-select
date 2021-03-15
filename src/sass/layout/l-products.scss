@@ -22,60 +22,11 @@
   text-align: center;
 }
 
-.l-products__pagination {
-  margin-top: 25px;
-  text-align: center;
-
-  @include max-screen($breakpoint-mobile) {
-    margin-top: 10px;
-  }
-
-  .wp-pagenavi {
-    span,
-    a {
-      padding: 15px 20px;
-      color: $color-primary;
-      border-color: $color-primary;
-      transition: background-color $duration $easing,
-      color $duration $easing;
-
-      @include max-screen($breakpoint-mobile) {
-        padding: 6px 10px;
-        font-size: 12px;
-      }
-
-      &:hover,
-      &.current {
-        color: #fff !important;
-        border-color: $color-primary;
-        background-color: $color-primary;
-      }
-      &:visited {
-        color: $color-primary;
-      }
-
-      &.previouspostslink,
-      &.nextpostslink {
-        cursor: pointer;
-      }
-    }
-  }
-}
-
 @media only screen and (min-width : 768px) and (max-height: 800px) {
   .l-products__content {
     ul {
       li {
         margin-bottom: 7px;
-      }
-    }
-  }
-  .l-products__pagination {
-    .wp-pagenavi {
-      span,
-      a {
-        padding: 10px 15px;
-        font-size: 12px;
       }
     }
   }

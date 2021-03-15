@@ -21,7 +21,7 @@ export default function toggleShow() {
 			$(e.currentTarget).addClass('is-active');
 		}
 		else {
-			window.location = `/${target}`;
+			window.location = `/mama-select/${target}`;
 		}
 	});
 

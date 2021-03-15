@@ -193,7 +193,7 @@ function toggleShow() {
 			$trigger.removeClass('is-active');
 			$(e.currentTarget).addClass('is-active');
 		} else {
-			window.location = '/' + target;
+			window.location = '/mama-select/' + target;
 		}
 	});
 
