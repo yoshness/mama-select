@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 8);
+/******/ 	return __webpack_require__(__webpack_require__.s = 9);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -72,16 +72,18 @@
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_jquery__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__modules_search__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__modules_toggle_show__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__modules_search__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__modules_toggle_show__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__modules_page_transition__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__modules_truncate__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__modules_swipe_actions__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__modules_truncate__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__modules_swipe_actions__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__modules_popup__ = __webpack_require__(3);
 
 window.jQuery = __WEBPACK_IMPORTED_MODULE_0_jquery___default.a;
 window.$ = __WEBPACK_IMPORTED_MODULE_0_jquery___default.a;
+
 
 
 
@@ -94,6 +96,7 @@ __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__modules_toggle_show__["a" /* 
 __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_3__modules_page_transition__["a" /* default */])();
 __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_4__modules_truncate__["a" /* default */])();
 __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_5__modules_swipe_actions__["a" /* default */])();
+__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_6__modules_popup__["a" /* default */])();
 
 /***/ }),
 /* 1 */
@@ -126,6 +129,64 @@ function pageTransition() {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = popup;
+function popup() {
+	var $trigger = $('.js-popup-trigger'),
+	    $close = $('.js-popup-close'),
+	    $htmlBody = $('html, body'),
+	    $popup = $('#js-popup'),
+	    $img = $('.js-popup-image'),
+	    $title = $('.js-popup-title'),
+	    $description = $('.js-popup-description'),
+	    $price = $('.js-popup-price'),
+	    $url = $('.js-popup-url');
+
+	$trigger.on('click', function (e) {
+		e.preventDefault();
+
+		var image = $(e.currentTarget).data('img'),
+		    title = $(e.currentTarget).data('title'),
+		    description = $(e.currentTarget).data('description'),
+		    price = $(e.currentTarget).data('price'),
+		    url = $(e.currentTarget).data('url');
+
+		$img.attr('src', image);
+		$title.text(title);
+		$description.text(description);
+		$price.text('\xA5' + price);
+		$url.attr('href', url);
+
+		$popup.addClass('is-active');
+		$htmlBody.addClass('is-locked');
+		$close.show();
+	});
+
+	$close.on('click', function (e) {
+		e.preventDefault();
+		$(e.currentTarget).hide();
+		$popup.removeClass('is-active');
+		$htmlBody.removeClass('is-locked');
+	});
+
+	$popup.on('click', function (e) {
+		e.preventDefault();
+
+		if ($(e.currentTarget).hasClass('is-active')) {
+			$popup.removeClass('is-active');
+			$htmlBody.removeClass('is-locked');
+		}
+	});
+
+	$popup.find('a').on('click', function (e) {
+		e.stopPropagation();
+	});
+}
+
+/***/ }),
+/* 4 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
 /* harmony export (immutable) */ __webpack_exports__["a"] = search;
 function search() {
     var $trigger = $('.js-header-search-trigger'),
@@ -139,7 +200,7 @@ function search() {
 }
 
 /***/ }),
-/* 4 */
+/* 5 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -166,7 +227,7 @@ function swipeActions() {
 }
 
 /***/ }),
-/* 5 */
+/* 6 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -220,7 +281,7 @@ function toggleShow() {
 }
 
 /***/ }),
-/* 6 */
+/* 7 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -239,7 +300,7 @@ function truncate() {
 }
 
 /***/ }),
-/* 7 */
+/* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -11127,7 +11188,7 @@ return jQuery;
 
 
 /***/ }),
-/* 8 */
+/* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(0);

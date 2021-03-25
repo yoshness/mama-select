@@ -27,7 +27,13 @@ get_header();
 				?>
 				<li>
 					<div class="product-block">
-						<a href="<?php the_field('url'); ?>" class="u-flex u-flex--center" target="_blank" rel="nofollow">
+						<a href="#" 
+							class="u-flex u-flex--center js-popup-trigger" 
+							data-img="<?php the_field('image'); ?>" 
+							data-title="><?php the_title(); ?>" 
+							data-description="<?php the_field('description'); ?>" 
+							data-price="<?php the_field('price'); ?>" 
+							data-url="<?php the_field('url'); ?>">
 							<img src="<?php the_field('image'); ?>" alt="">
 							<h3 class="js-truncate"><?php the_title(); ?></h3>
 							<span>¥<?php the_field('price'); ?></span>
