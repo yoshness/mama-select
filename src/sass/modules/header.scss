@@ -56,7 +56,7 @@
   width: 100%;
   margin-top: 25px;
   font-family: $font-avenir;
-  font-size: 15px;
+  font-size: 16px;
 
   @include max-screen($breakpoint-mobile) {
     margin-top: 20px;
@@ -65,6 +65,7 @@
   }
 
   a {
+    font-size: 15px;
     color: $base-font-color;
     transition: color $duration $easing;
 

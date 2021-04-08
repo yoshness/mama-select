@@ -32,20 +32,29 @@ export default function popup() {
 	$close.on('click', function(e) {
   		e.preventDefault();
   		$(e.currentTarget).hide();
-		$popup.removeClass('is-active');
-		$htmlBody.removeClass('is-locked');
+		closeModal();
 	});
 
 	$popup.on('click', function(e) {
   		e.preventDefault();
-  		
-  		if($(e.currentTarget).hasClass('is-active')) {
-  			$popup.removeClass('is-active');
-			$htmlBody.removeClass('is-locked');
+
+  		if($(e.target).attr('id') == 'js-popup' && $(e.currentTarget).hasClass('is-active')) {
+  			closeModal();
 		}
 	});
 
 	$popup.find('a').on('click', function(e) {
   		e.stopPropagation();
 	});
+
+	document.addEventListener('keydown', e => {
+      	if (e.key === 'Escape' && $popup.hasClass('is-active')) {  
+       		closeModal();
+      	}
+    }, false);
+
+    function closeModal() {
+    	$popup.removeClass('is-active');
+		$htmlBody.removeClass('is-locked');
+    }
 }

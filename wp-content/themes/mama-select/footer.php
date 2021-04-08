@@ -21,7 +21,7 @@
 
 			<div class="popup__bottom u-flex">
 				<em class="popup__price js-popup-price"></em>
-				<a href="#" class="js-popup-url" target="_blank" rel="nofollow">Read More</a>
+				<a href="#" class="js-popup-url" target="_blank" rel="nofollow">詳しくはこちら</a>
 			</div>
 		</div>
 	</div>

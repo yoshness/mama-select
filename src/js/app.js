@@ -8,6 +8,7 @@ import pageTransition from './modules/page-transition';
 import truncate from './modules/truncate';
 import swipeActions from './modules/swipe-actions';
 import popup from './modules/popup';
+import playVideo from './modules/play-video';
 
 search();
 toggleShow();
@@ -15,3 +16,4 @@ pageTransition();
 truncate();
 swipeActions();
 popup();
+playVideo();
