@@ -16,6 +16,5 @@
 		<a href="#js-categories" class="js-toggle-trigger">カテゴリ</a>
 		<a href="#js-ranking" class="js-toggle-trigger">ランキング</a>
 		<a href="#js-latest" class="js-toggle-trigger">最新</a>
-		<a href="#js-about" class="js-toggle-trigger">ABOUT</a>
 	</div>
 </header>

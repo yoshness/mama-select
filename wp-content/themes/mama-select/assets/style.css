@@ -33,7 +33,7 @@ html.is-locked, body.is-locked {
   overflow: hidden;
 }
 
-html.is-scrollable, body.is-scrollable {
+html.page-register, body.page-register {
   overflow: initial;
   height: auto;
 }
@@ -996,8 +996,7 @@ textarea {
 
 .l-index__categories,
 .l-index__ranking,
-.l-index__latest,
-.l-index__about {
+.l-index__latest {
   width: 100%;
   position: absolute;
   left: 50%;
@@ -1008,8 +1007,7 @@ textarea {
 
 .l-index__categories.is-shown,
 .l-index__ranking.is-shown,
-.l-index__latest.is-shown,
-.l-index__about.is-shown {
+.l-index__latest.is-shown {
   pointer-events: auto;
   opacity: 1;
   transition: opacity 0.25s ease-in-out;
@@ -1017,15 +1015,13 @@ textarea {
 
 .l-index__categories ul,
 .l-index__ranking ul,
-.l-index__latest ul,
-.l-index__about ul {
+.l-index__latest ul {
   list-style-type: none;
 }
 
 .l-index__categories ul li,
 .l-index__ranking ul li,
-.l-index__latest ul li,
-.l-index__about ul li {
+.l-index__latest ul li {
   width: 23.7%;
   margin-bottom: 20px;
 }
@@ -1033,16 +1029,14 @@ textarea {
 @media screen and (max-width: 767px) {
   .l-index__categories ul li,
   .l-index__ranking ul li,
-  .l-index__latest ul li,
-  .l-index__about ul li {
+  .l-index__latest ul li {
     width: 30%;
   }
 }
 
 .l-index__categories ul li a,
 .l-index__ranking ul li a,
-.l-index__latest ul li a,
-.l-index__about ul li a {
+.l-index__latest ul li a {
   display: block;
   width: 100%;
 }
@@ -1099,95 +1093,6 @@ textarea {
     top: -9px;
     font-size: 11px;
   }
-}
-
-.l-index__about {
-  text-align: center;
-}
-
-.l-index__about span {
-  display: block;
-  font-size: 15px;
-}
-
-.l-index__about a {
-  display: block;
-}
-
-.l-index__about a .l-index__about-icon {
-  width: 25px;
-  height: 25px;
-  -o-object-fit: contain;
-     object-fit: contain;
-}
-
-.l-index__about-invitation {
-  width: 550px;
-  height: auto;
-  margin-bottom: 25px;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-@media screen and (max-width: 767px) {
-  .l-index__about-invitation {
-    width: 100%;
-    height: 125vw;
-    padding: 0 20px;
-  }
-}
-
-.l-index__about-video {
-  margin: 25px auto;
-}
-
-.l-index__about-video video {
-  width: 350px;
-  height: auto;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-@media screen and (max-width: 767px) {
-  .l-index__about-video video {
-    width: 100%;
-    height: 193vw;
-  }
-}
-
-.l-index__about-video a {
-  width: 100px;
-  height: 100px;
-  position: absolute;
-  z-index: 5;
-  top: 65%;
-  left: 50%;
-  text-align: center;
-  border-radius: 50%;
-  background-color: #9dadba;
-  transition: all 0.25s ease-in-out;
-  transform: translate(-50%, -50%);
-}
-
-.l-index__about-video a.is-hidden {
-  pointer-events: none;
-  opacity: 0;
-}
-
-.l-index__about-video a svg {
-  width: 40px;
-  height: 40px;
-  position: relative;
-  top: 30px;
-  left: 4px;
-}
-
-.l-index__about-video a svg path {
-  fill: #dfe6ee;
-}
-
-.l-index__about-home {
-  margin-top: 70px;
 }
 
 @media only screen and (min-width: 768px) and (max-height: 900px) {
@@ -1304,4 +1209,94 @@ textarea {
   .l-pagination .pagenavi .custom-pagination {
     width: 220px;
   }
+}
+
+.l-register__about {
+  position: relative;
+  text-align: center;
+}
+
+.l-register__about span {
+  display: block;
+  font-size: 15px;
+}
+
+.l-register__about a {
+  display: block;
+}
+
+.l-register__about a .l-register__about-icon {
+  width: 25px;
+  height: 25px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.l-register__about-invitation {
+  width: 550px;
+  height: auto;
+  margin: 25px auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media screen and (max-width: 767px) {
+  .l-register__about-invitation {
+    width: 100%;
+    height: 125vw;
+    padding: 0 20px;
+  }
+}
+
+.l-register__about-video {
+  margin: 25px auto;
+}
+
+.l-register__about-video video {
+  width: 350px;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media screen and (max-width: 767px) {
+  .l-register__about-video video {
+    width: 100%;
+    height: 193vw;
+  }
+}
+
+.l-register__about-video a {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  z-index: 5;
+  top: 25%;
+  left: 50%;
+  text-align: center;
+  border-radius: 50%;
+  background-color: #9dadba;
+  transition: all 0.25s ease-in-out;
+  transform: translate(-50%, -50%);
+}
+
+.l-register__about-video a.is-hidden {
+  pointer-events: none;
+  opacity: 0;
+}
+
+.l-register__about-video a svg {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  top: 30px;
+  left: 4px;
+}
+
+.l-register__about-video a svg path {
+  fill: #dfe6ee;
+}
+
+.l-register__about-home {
+  margin-top: 70px;
 }
