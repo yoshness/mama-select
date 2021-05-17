@@ -45,7 +45,7 @@ export default function toggleShow() {
 			$(e.currentTarget).addClass('is-active');
 		}
 		else {
-			window.location = `/mama-select/${target}`;
+			window.location = `/${target}`;
 		}
 	}); 
 }

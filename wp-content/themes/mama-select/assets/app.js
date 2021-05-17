@@ -305,7 +305,7 @@ function toggleShow() {
 			$trigger.removeClass('is-active');
 			$(e.currentTarget).addClass('is-active');
 		} else {
-			window.location = '/mama-select/' + target;
+			window.location = '/' + target;
 		}
 	});
 }
@@ -319,7 +319,7 @@ function toggleShow() {
 function truncate() {
 	var truncateEls = document.querySelectorAll('.js-truncate');
 	var options = {
-		height: 30,
+		height: $(window).width() > 768 ? 80 : 40,
 		tolerance: 0,
 		truncate: 'letter'
 	};
